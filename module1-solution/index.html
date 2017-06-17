@@ -1,29 +1,15 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Lunch Checker</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <style>
-      .message { font-size: 1.3em; font-weight: bold; }
-    </style>
-  </head>
-<body>
-   <div class="container">
-     <h1>Lunch Checker</h1>
-
-         <div class="form-group">
-             <input id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
-         </div>
-         <div class="form-group">
-             <button class="btn btn-default">Check If Too Much</button>
-         </div>
-         <div class="form-group message">
-           <!-- Your message can go here. -->
-         </div>
-   </div>
-
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Module 1 Solution</title>
+    <script src="angular.js"></script>
+    <script src="myApp.js"></script>
+</head>
+<body ng-app="LunchCheck"> 
+    <div ng-controller="LunchCheckController">
+        <p><h2>Lunch Checker</h2></p>
+        <input type="text" ng-style="myTextboxStyle" ng-model="inputitems"/><br/>
+        <input type="button" value="Check If Too Much" ng-click="checkItems()"/><br />
+        <span ng-style="myColor">{{message}}</span>
+    </div>
 </body>
 </html>
